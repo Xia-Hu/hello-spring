@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sogou.pp</groupId>
+  <artifactId>mvn-test-01</artifactId>
+  <packaging>jar</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>mvn-test-01 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<spring.version>4.1.9.RELEASE</spring.version>
+  	<spring.boot.version>1.2.4.RELEASE</spring.boot.version>
+  	<junit.version>3.8.1</junit.version>
+  </properties>
+  
+  <!-- maven的继承 -->
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-starter-parent</artifactId>
+  	<version>1.2.4.RELEASE</version>
+  </parent>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    
+    <!--  使项目可部署在外部容器  -->
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-tomcat</artifactId>
+    	<scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+  
+  
+  <build>
+    <finalName>mvn-test-01</finalName>
+    <plugins>
+    	<plugin>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-maven-plugin</artifactId>
+    		<executions>
+    			<execution>
+    				<goals>
+    					<goal>repackage</goal>
+    				</goals>
+    			</execution>
+    		</executions>
+    	</plugin>
+    </plugins>
+  </build>
+  
+  <!-- 添加依赖库 -->
+  <repositories>
+  	<repository>
+  		<id>spring-releases</id>
+  		<url>https://repo.spring.io/libs-release</url>
+  	</repository>
+  </repositories>
+  <pluginRepositories>
+  	<pluginRepository>
+  		<id>spring-releases</id>
+  		<url>https://repo.spring.io/libs-release</url>
+  	</pluginRepository>
+  </pluginRepositories>
+  
+</project>
