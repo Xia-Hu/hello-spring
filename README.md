@@ -1,3 +1,9 @@
 # hello-spring
 
-这是一个示例。示范一个基本的spring boot框架下的java编程，以及如何配置。
+## hello-mybatis
+
+这是一个mybatis操作数据库的基本的例子。
+
+## hello-spring-boot-with-mybatis
+
+这是一个spring boot整合mybatis创建一个java web项目的例子。
