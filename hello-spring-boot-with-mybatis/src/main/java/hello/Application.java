@@ -7,11 +7,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // 	@Configuration 标识该类中包含一个或多个bean
 // 	@ComponentScan 进行类扫描
 // 	@EnableAutoConfiguration 表示spring要根据添加的jar依赖猜测会如何配置spring
-@SpringBootApplication
+
+/**
+ *  helloannotation包中是用注解方式整合mybatis和spring的例子
+ *  hello包中是用xml方式整合mybatis和spring的例子
+ * @author huxia205906
+ *
+ */
+//@SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class);
-	}
-	
+//	public static void main(String[] args) {
+//		SpringApplication.run(Application.class);
+//	}
+//	
 }

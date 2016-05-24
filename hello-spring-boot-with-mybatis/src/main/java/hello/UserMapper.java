@@ -1,6 +1,6 @@
 package hello;
 
-import java.util.List;
+import hello.User;
 
 public interface UserMapper {
 
