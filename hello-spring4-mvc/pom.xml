@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>hello</groupId>
+  <artifactId>hello-spring4-mvc</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>hello-spring4-mvc Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<spring.version>4.1.9.RELEASE</spring.version>
+  	<spring.boot.version>1.2.4.RELEASE</spring.boot.version>
+  	<javax.servlet.version>3.0.1</javax.servlet.version>
+  	<jstl.version>1.2</jstl.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- spring boot config -->
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-web</artifactId>
+    	<version>${spring.boot.version}</version>
+    	<scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-tomcat</artifactId>
+    	<version>${spring.boot.version}</version>
+    </dependency>
+    
+    <!-- spring4 config -->
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-core</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-web</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <!-- spring4 config end -->
+    
+    <!-- servlet api -->
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+    	<version>${javax.servlet.version}</version>
+    	<scope>provided</scope>
+    </dependency>
+    
+    <!-- jstl -->
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>${jstl.version}</version>
+    </dependency> 
+    
+    <!-- 让Spring boot能识别并处理jsp -->
+    <dependency>
+    	<groupId>org.apache.tomcat.embed</groupId>
+    	<artifactId>tomcat-embed-jasper</artifactId>
+    	<version>8.0.28</version>
+    	<scope>provided</scope>
+    </dependency>
+    
+  </dependencies>
+  
+  <build>
+    <finalName>hello-spring4-mvc</finalName>
+    <plugins>
+    	<plugin>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-maven-plugin</artifactId>
+    		<executions>
+    			<execution>
+    				<goals>
+    					<goal>repackage</goal>
+    				</goals>
+    			</execution>
+    		</executions>
+    	</plugin>
+    </plugins>
+  </build>
+</project>
